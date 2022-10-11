@@ -23,7 +23,11 @@ function App() {
           return fetch('https://openapi.programming-hero.com/api/quiz')
         },
         element:<Home></Home>},
-        {path:'/courses', element:<Courses></Courses>},
+        {path:'/courses',
+        loader:async()=> {
+          return fetch('https://openapi.programming-hero.com/api/quiz')
+        },
+         element:<Courses></Courses>},
         {path:'/analysis', element:<Analysis></Analysis>},
         {path:'/blog', element:<Blog></Blog>},
         {
