@@ -42,6 +42,10 @@ function App() {
           element: <Quiz></Quiz>
         }
       ]
+    },
+    {
+      path:'*',
+      element:<div> Invalid Page </div>
     }
   ]);
   return (

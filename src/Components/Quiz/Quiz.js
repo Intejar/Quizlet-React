@@ -9,10 +9,12 @@ const Quiz = () => {
 
     return (
         <div>
-            <h1>start quiz of {name}</h1>
-            <h2>Total:{total}</h2>
-            <h2>correct: <span id='correct'>0</span></h2>
-            <h2>incorrect: <span id='incorrect'>0</span></h2>
+            <div className='bg-blue-300 p-10 my-10 w-60 mx-auto'>
+                <h1 className='text-2xl text-white font bold'>  START QUIZ OF <span className='text-3xl text-blue-700 font-extrabold'>{name}</span></h1>
+                <h2 className='text-xl text-blue-900 font-semibold' >Total: <span className='text-red-500'>{total}</span></h2>
+                <h2 className='text-xl text-blue-900 font-semibold'>correct: <span className='text-red-500' id='correct'>0</span></h2>
+                <h2 className='text-xl text-blue-900 font-semibold'>incorrect: <span className='text-red-500' id='incorrect'>0</span></h2>
+            </div>
             {
                 questions.map((question, index) => <Questions key={question.id} question={question} index={index}></Questions>)
             }
