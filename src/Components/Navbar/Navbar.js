@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     return (
 
-        <div className='bg-blue-200 fixed top-0'>
+        <div className='bg-blue-200'>
             <div className='flex justify-between mx-10 p-5'>
                 <div>
                     <h1 className='text-3xl font-bold'>Quizlet</h1>
