@@ -20,7 +20,7 @@ const Home = () => {
                     </a>
                 </div>
 
-                <div className='bg-blue-200 py-5 border rounded-xl mx-20'>
+                <div className='bg-blue-200 py-20 border rounded-xl mx-20'>
                     <h1 className=' text-xl md:text-3xl font-bold text-gray-500'>Our Courses</h1>
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-5 h-screen place-items-center'>
                         {
