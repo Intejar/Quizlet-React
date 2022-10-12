@@ -6,7 +6,7 @@ import Cart from '../Cart/Cart';
 const Home = () => {
     const courses = useLoaderData();
     const details = courses.data;
-    console.log(details)
+    // console.log(details)
     return (
         <div className='mt-10 bg-gray-100'>
             <div className='flex justify-evenly items-center'>
