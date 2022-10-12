@@ -9,14 +9,14 @@ const Courses = () => {
     const details = courses.data;
     // console.log(details)
     return (
-        <div className='mt-10 bg-gray-100'>
+        <div className='mt-10 '>
             {/* <div className='flex justify-evenly items-center'>
                 <div>
                     <h1>This is Homepage</h1>
                 </div>
                 <img className='h-40' src={one} alt="" />
             </div> */}
-            <div className='grid grid-cols-4 mx-10'>
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-5 mx-10'>
                 {
                     details.map(detail=><Cart key={detail.id} detail={detail}></Cart>)
                     

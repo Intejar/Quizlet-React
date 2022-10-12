@@ -17,25 +17,29 @@ function App() {
     {
       path: "/",
       element: <Main></Main>,
-      children:[
-        {path:'/home',
-        loader:async()=> {
-          return fetch('https://openapi.programming-hero.com/api/quiz')
-        },
-        element:<Home></Home>},
-        {path:'/courses',
-        loader:async()=> {
-          return fetch('https://openapi.programming-hero.com/api/quiz')
-        },
-         element:<Courses></Courses>},
-        {path:'/analysis', element:<Analysis></Analysis>},
-        {path:'/blog', element:<Blog></Blog>},
+      children: [
         {
-          path:'/course/:courseId',
-          loader:async({params})=>{
+          path: '/home',
+          loader: async () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz')
+          },
+          element: <Home></Home>
+        },
+        {
+          path: '/courses',
+          loader: async () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz')
+          },
+          element: <Courses></Courses>
+        },
+        { path: '/analysis', element: <Analysis></Analysis> },
+        { path: '/blog', element: <Blog></Blog> },
+        {
+          path: '/course/:courseId',
+          loader: async ({ params }) => {
             return fetch(`https://openapi.programming-hero.com/api/quiz/${params.courseId}`)
           },
-          element:<Quiz></Quiz>
+          element: <Quiz></Quiz>
         }
       ]
     }

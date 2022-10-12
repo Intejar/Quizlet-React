@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-const Questions = ({ question }) => {
+const Questions = ({ question, index }) => {
     const answers = question.options
     // console.log(answers.map(answer => console.log(answer)));
     const GetCorrectAns = () => {
@@ -15,7 +15,7 @@ const Questions = ({ question }) => {
     return (
         <div className='border border-red-200 my-10'>
             <div className='flex justify-evenly'>
-                <Square2StackIcon className='h-5 w-5'></Square2StackIcon>
+                <h1>Ques-{index+1}</h1>
                 <h1>{question.question}</h1>
                 <QuestionMarkCircleIcon onClick={GetCorrectAns} className='h-5 w-5 hover:cursor-pointer'></QuestionMarkCircleIcon>
                 <ToastContainer

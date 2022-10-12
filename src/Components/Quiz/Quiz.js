@@ -14,7 +14,7 @@ const Quiz = () => {
             <h2>correct: <span id='correct'>0</span></h2>
             <h2>incorrect: <span id='incorrect'>0</span></h2>
             {
-                questions.map(question =><Questions key={question.id} question={question}></Questions>)
+                questions.map((question, index) => <Questions key={question.id} question={question} index={index}></Questions>)
             }
         </div>
     );
